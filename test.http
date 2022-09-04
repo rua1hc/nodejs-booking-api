@@ -1,0 +1,60 @@
+###
+http://localhost:3000/api/movies
+
+
+###
+http://localhost:3000/api/customers
+
+
+###
+http://localhost:3000/api/genres/
+###
+POST http://localhost:3000/api/genres
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmY1MmQxOWJjMGM3MTNhZWM0YWZlZjUiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NjAzNzg5MTN9.N82Ueh2b-ySRswuDqglaGaEWUHGqx0-9VacknzblldM
+content-type: application/json
+
+{
+    "name": "add-auth"
+}
+###
+DELETE http://localhost:3000/api/genres/62fa1500e3bbeb0440020274
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmY1MmQxOWJjMGM3MTNhZWM0YWZlZjUiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NjAzNzg5MTN9.N82Ueh2b-ySRswuDqglaGaEWUHGqx0-9VacknzblldM
+
+
+### ### ###
+http://localhost:3000/api/users/
+###
+http://localhost:3000/api/users/me
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmY1MmQxOWJjMGM3MTNhZWM0YWZlZjUiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NjAzNzg5MTN9.N82Ueh2b-ySRswuDqglaGaEWUHGqx0-9VacknzblldM
+###
+POST http://localhost:3000/api/users
+content-type: application/json
+
+{
+    "name": "auth-token1",
+    "email": "auth.token1@node.com",
+    "password": "12341234"
+}
+
+
+### ### ###
+POST http://localhost:3000/api/auth
+content-type: application/json
+
+{
+    "email": "hashpw@node.com",
+    "password": "12341234"
+}
+
+
+### ### ###
+http://localhost:3000/api/rentals
+###
+POST http://localhost:3000/api/rentals
+content-type: application/json
+
+{
+    "customerId": "62efecd4debea8024036af82",
+    "movieId": "62c144939cb3d01be0feb910"
+}
+
