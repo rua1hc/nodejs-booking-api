@@ -1,3 +1,4 @@
+//sqlize-cli
 const path = require("path");
 
 module.exports = {
@@ -6,3 +7,6 @@ module.exports = {
     "seeders-path": path.resolve("sqlizeCLI", "seeders"),
     "migrations-path": path.resolve("sqlizeCLI", "migrations"),
 };
+
+//sqlize-auto
+// node_modules\.bin\sequelize-auto -o "./models" -d sql_bookingCare -h localhost -p 3306 -u root -x 240690 -e mysql -l es6
