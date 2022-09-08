@@ -1,4 +1,5 @@
-import winston from "winston";
+const winston = require("winston");
+
 module.exports = function (err, req, res, next) {
     winston.error(err);
 

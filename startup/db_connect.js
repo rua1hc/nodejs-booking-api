@@ -1,11 +1,7 @@
-import winston from "winston";
-const { Sequelize } = require("sequelize");
+const winston = require("winston");
+const sequelize = require("./db");
 
 module.exports = function () {
-    const sequelize = new Sequelize("database", "root", null, {
-        dialect: "mysql",
-    });
-
     sequelize
         .authenticate()
         .then(() =>

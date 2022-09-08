@@ -10,6 +10,8 @@ const _schedules = require("./schedules");
 const _specialties = require("./specialties");
 const _users = require("./users");
 
+const sequelize = require("../startup/db");
+
 function initModels(sequelize) {
     const bookings = _bookings(sequelize, DataTypes);
     const clinics = _clinics(sequelize, DataTypes);
@@ -74,6 +76,10 @@ function initModels(sequelize) {
         users,
     };
 }
-module.exports = initModels;
+
+const models = initModels(sequelize);
+
+module.exports = models;
+// module.exports = initModels;
 // module.exports.initModels = initModels;
 // module.exports.default = initModels;
